@@ -1,0 +1,131 @@
+.footer {
+    margin: 0 auto;
+    padding: 28px 0 46px;
+}
+
+.footer__container {
+    max-width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px 0;
+}
+
+.footer__wrap {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:555px) {
+    .footer__wrap:first-of-type {
+        display: none;
+    }
+}
+
+.footer__image {
+    width: 24px;
+    height: 24px;
+}
+
+
+.footer__link {
+    text-decoration: none;
+    transition: linear 0.4s;
+}
+
+.footer__link + .footer__link {
+    margin-left: 16px;
+}
+
+@media screen and (max-width:460px) {
+    .footer__link + .footer__link {
+        margin-left: 8px;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .footer__link + .footer__link {
+        margin-left: 4px;
+    }
+}
+
+.footer__link:hover {
+    fill: #CAAC0E;
+}
+
+.footer__links {
+    text-decoration: none;
+}
+
+.footer__developer {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #8E91A7;
+    margin: 0;
+    cursor: pointer;
+    transition: linear 0.4s;
+}
+
+.footer__developer:hover {
+    color: #CAAC0E;
+}
+
+@media screen and (max-width: 775px) {
+    .footer__developer {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+.footer__link {
+    text-decoration: none;
+}
+
+.footer__contacts {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.015em;
+    color: #C2C6D7;
+    margin: 0;
+}
+
+@media screen and (max-width: 775px) {
+    .footer__contacts {
+        font-size: 13px;
+        line-height: 16px;
+    }
+}
+
+.footer__consul {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.015em;
+    color: #C2C6D7;
+    margin: 0 0 0 30px;
+}
+
+@media screen and (max-width: 775px) {
+    .footer__consul {
+        font-size: 13px;
+        line-height: 16px;
+        margin: 0 0 0 20px;
+    }
+}
+
+.footer__contacts:hover {
+    transition: linear 0.4s;
+    color: #FFFFFF;
+}
+
+.footer__consul:hover {
+    transition: linear 0.4s;
+    color: #FFFFFF;
+}
