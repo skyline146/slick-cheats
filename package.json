@@ -21,6 +21,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
+    "start-host": "next start -H 0.0.0.0 -p ${PORT:-8080}",
     "build": "next build",
     "export": "next export",
     "test": "react-scripts test",
