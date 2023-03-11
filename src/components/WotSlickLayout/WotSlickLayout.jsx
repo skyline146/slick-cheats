@@ -37,7 +37,7 @@ export default function WotSlickLayout({ data, region }) {
       subtitle="SLICK"
       gameLogo={wot}
       link="/catalog/wot"
-      link2={`/wot/slick/${region === "ru" ? "cis" : "eu"}`}
+      link2={`/wot/slick/${region}`}
       status={<Undetected />}
       functional={functional}
       data={data}
