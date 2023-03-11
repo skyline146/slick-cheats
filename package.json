@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "start-host": "next start -H 89.108.64.7",
+    "start-host": "next start -H 89.108.64.7 -p 443 --https",
     "build": "next build",
     "export": "next export"
   },
