@@ -37,7 +37,7 @@ const App = ({ Component, pageProps }) => {
           property="og-description"
           content="На нашем сайте вы можете приобрести приватные читы на все популярные игры, такие как: Escape from Tarkov, Apex, Rust, World of Tanks Blitz и многие другие"
         />
-        <link rel="apple-touch-icon" href="/logo192.png" />
+        <link rel="icon" href="/logo192.png" type="image/png" />
 
         <link rel="manifest" href="/manifest.json" />
 
