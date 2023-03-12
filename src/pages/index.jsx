@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link rel="alternate" hrefLang="en" href="https://slickcheats.com" />
-        <link rel="alternate" hrefLang="ru" href="https://slickcheats.com/ru" />
+        <link rel="alternate" hreflang="en" href="https://slickcheats.com" />
+        <link rel="alternate" hreflang="ru" href="https://slickcheats.com/ru" />
       </Head>
       <Main />
       <Games />

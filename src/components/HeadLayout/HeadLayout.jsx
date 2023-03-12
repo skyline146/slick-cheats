@@ -5,12 +5,14 @@ export default function HeadLayout({ pathname }) {
     <Head>
       <link
         rel="alternate"
-        hrefLang="en"
+        //eslint-disable-next-line
+        hreflang="en"
         href={`https://slickcheats.com${pathname}`}
       />
       <link
         rel="alternate"
-        hrefLang="ru"
+        //eslint-disable-next-line
+        hreflang="ru"
         href={`https://slickcheats.com/ru${pathname}`}
       />
     </Head>
