@@ -13,7 +13,6 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <link rel="apple-touch-icon" sizes="152x152" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta
@@ -37,10 +36,6 @@ const App = ({ Component, pageProps }) => {
           property="og-description"
           content="На нашем сайте вы можете приобрести приватные читы на все популярные игры, такие как: Escape from Tarkov, Apex, Rust, World of Tanks Blitz и многие другие"
         />
-        <link rel="icon" href="/logo192.png" type="image/png" />
-
-        <link rel="manifest" href="/manifest.json" />
-
         <title>Slick - лучший магазин приватных читов</title>
       </Head>
       <NextNProgress color="#CAAC0E" options={{ showSpinner: false }} />
