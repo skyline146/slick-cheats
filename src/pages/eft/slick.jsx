@@ -58,7 +58,7 @@ function EftSlick({ data }) {
       <iframe
         style={{ border: 0 }}
         className={styles.functional__media_logo}
-        src="https://www.youtube.com/embed/1ifplVGqNDA"
+        src="https://www.youtube.com/embed/QIpTVzZ4Juw"
         title="SLICK EXTERNAL EFT"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>

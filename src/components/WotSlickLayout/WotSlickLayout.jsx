@@ -4,7 +4,6 @@ import ProductPageLayout from "@/components/Product/ProductPageLayout";
 const wot = "/images/logos/wot_white.svg";
 const wot_media_1 = "/images/products/products-wot1.png";
 const wot_media_2 = "/images/products/products-wot2.png";
-const cheatDemoVideo = "/images/videos/slick_wot_demo.mp4";
 
 import styles from "@/components/Product/Functional.module.css";
 
@@ -43,10 +42,14 @@ export default function WotSlickLayout({ data, region }) {
       data={data}
       region={region}
     >
-      <video className={styles.functional__media_logo} controls muted>
-        <source src={cheatDemoVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <iframe
+        style={{ border: 0 }}
+        className={styles.functional__media_logo}
+        src="https://www.youtube.com/embed/7yrWhcdjMW4"
+        title="SLICK WOT BLITZ"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
       <div className={styles.functional__media_wot}>
         <img
           className={styles.functional__media_logo_wot}
