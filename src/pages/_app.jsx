@@ -3,8 +3,7 @@ import { appWithTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import NextNProgress from "nextjs-progressbar";
 
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
+import Layout from "@/components/Layout/Layout";
 
 import "../styles/globals.css";
 
@@ -39,11 +38,9 @@ const App = ({ Component, pageProps }) => {
         <title>Slick - лучший магазин приватных читов</title>
       </Head>
       <NextNProgress color="#CAAC0E" options={{ showSpinner: false }} />
-      <div className="page">
-        <Header />
+      <Layout>
         <Component router={router} {...pageProps} />
-        <Footer />
-      </div>
+      </Layout>
     </>
   );
 };

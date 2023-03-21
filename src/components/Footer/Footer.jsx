@@ -6,7 +6,7 @@ function Footer() {
   const { t } = useTranslation("common");
 
   return (
-    <section className={styles.footer}>
+    <footer className={styles.footer}>
       <div className={styles.footer__container}>
         <div className={styles.footer__wrap}>
           <a
@@ -73,7 +73,7 @@ function Footer() {
           </a>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
 
