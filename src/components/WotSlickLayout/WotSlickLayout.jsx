@@ -40,6 +40,7 @@ export default function WotSlickLayout({ data, region }) {
       status={<Undetected />}
       functional={functional}
       data={data}
+      os={["Windows 10"]}
       region={region}
     >
       <iframe
