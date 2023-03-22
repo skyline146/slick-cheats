@@ -30,7 +30,6 @@ function GamesCatalog() {
           logo={apex_logo}
           title="Apex Legends"
           product="1"
-          price="289"
         />
         <GamesCatalogTitle
           link="/catalog/eft"
@@ -38,7 +37,6 @@ function GamesCatalog() {
           logo={tarkov_logo}
           title="Escape From Tarkov"
           product="1"
-          price="249"
         />
         <GamesCatalogTitle
           link="/catalog/bloodhunt"
@@ -46,7 +44,6 @@ function GamesCatalog() {
           logo={bloodhunt_logo}
           title="Bloodhunt"
           product="1"
-          price="249"
         />
         <GamesCatalogTitle
           link="/catalog/wot"
@@ -54,7 +51,6 @@ function GamesCatalog() {
           logo={wot_logo}
           title="WoT Blitz"
           product="2"
-          price="119"
         />
         <GamesCatalogTitle
           link="/catalog/dayz"
@@ -62,7 +58,6 @@ function GamesCatalog() {
           logo={dayz_logo}
           title="DayZ"
           product="1"
-          price="99"
         />
         <GamesCatalogTitle
           link="/catalog/rust"
@@ -70,7 +65,6 @@ function GamesCatalog() {
           logo={rust_logo}
           title="Rust"
           product="2"
-          price="99"
         />
       </div>
     </div>

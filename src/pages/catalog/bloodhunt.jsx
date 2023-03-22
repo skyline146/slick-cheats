@@ -35,7 +35,6 @@ function Bloodhunt() {
         logo={bloodhunt_logo}
         subtitle="Bloodhunt"
         status={<Update />}
-        price="249₽"
       />
     </GameLayout>
   );

@@ -35,7 +35,6 @@ function Rust() {
         logo={catalog_game}
         subtitle="Rust"
         status={<Undetected />}
-        price="99₽"
       />
       <AllGames
         link="/rust/collapse"
@@ -44,7 +43,6 @@ function Rust() {
         logo={catalog_game}
         subtitle="Rust"
         status={<Undetected />}
-        price="499₽"
       />
     </GameLayout>
   );

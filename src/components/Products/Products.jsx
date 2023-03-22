@@ -41,7 +41,6 @@ function Products() {
             logo={apex_logo}
             subtitle="Apex"
             status={<Update />}
-            price="289₽"
           />
           <AllGames
             link="/eft/slick"
@@ -50,7 +49,6 @@ function Products() {
             logo={tarkov_logo}
             subtitle="EFT"
             status={<Undetected />}
-            price="789₽"
           />
           <AllGames
             link="/bloodhunt/slick"
@@ -59,7 +57,6 @@ function Products() {
             logo={bloodhunt_logo}
             subtitle="Bloodhunt"
             status={<Update />}
-            price="249₽"
           />
           <AllGames
             link="/catalog/wot"
@@ -68,7 +65,6 @@ function Products() {
             logo={wot_logo}
             subtitle="World of Tanks Blitz"
             status={<Undetected />}
-            price="119₽"
           />
         </div>
       </div>

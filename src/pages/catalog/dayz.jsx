@@ -34,7 +34,6 @@ function DayZ() {
         logo={catalog_game}
         subtitle="DayZ"
         status={<Undetected />}
-        price="399₽"
       />
     </GameLayout>
   );

@@ -38,7 +38,6 @@ function Wot() {
         logo={wot_logo}
         subtitle="World of Tanks Blitz"
         status={<Undetected />}
-        price="119₽"
       />
       <AllGames
         link="/wot/slick/eu"
@@ -48,7 +47,6 @@ function Wot() {
         logo={wot_logo}
         subtitle="World of Tanks Blitz"
         status={<Undetected />}
-        price="2.52$"
       />
     </GameLayout>
   );

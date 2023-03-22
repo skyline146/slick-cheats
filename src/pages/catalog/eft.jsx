@@ -35,7 +35,6 @@ function Tarkov() {
         logo={tarkov_logo}
         subtitle="EFT"
         status={<Undetected />}
-        price="249₽"
       />
     </GameLayout>
   );

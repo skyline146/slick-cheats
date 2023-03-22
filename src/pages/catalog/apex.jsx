@@ -35,7 +35,6 @@ function Apex() {
         logo={apex_logo}
         subtitle="Apex"
         status={<Update />}
-        price="289₽"
       />
     </GameLayout>
   );

@@ -48,7 +48,7 @@ export default function WotSlickLayout({ data, region }) {
         src="https://www.youtube.com/embed/7yrWhcdjMW4"
         title="SLICK WOT BLITZ"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
+        allowFullScreen
       ></iframe>
       <div className={styles.functional__media_wot}>
         <img
