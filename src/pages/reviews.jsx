@@ -36,7 +36,7 @@ function Reviews() {
         title={t("about.reviews")}
         subtitle={t("about.reviewsDesc")}
         nav={t("about.reviews")}
-        link="/terms"
+        link="/reviews"
       />
 
       <div className={styles.review__wrapper_width}>

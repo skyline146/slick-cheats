@@ -26,7 +26,7 @@ function Terms() {
         title={t("about.terms")}
         subtitle={t("about.terms")}
         nav={t("about.terms")}
-        link="/catalog"
+        link="/terms"
       />
 
       <div className={styles.terms__wrapper_width}>
