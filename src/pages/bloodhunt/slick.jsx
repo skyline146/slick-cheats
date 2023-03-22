@@ -10,7 +10,7 @@ const bloodhunt = "/images/logos/bloodhunt_white.svg";
 
 import styles from "@/components/Product/Functional.module.css";
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
   const data = await getData("bloodhunt");
 
   return {

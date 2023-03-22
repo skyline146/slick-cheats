@@ -11,7 +11,7 @@ const dayz = "/images/logos/dayz_logo.svg";
 
 import styles from "@/components/Product/Functional.module.css";
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
   const data = await getData("dayz");
 
   return {

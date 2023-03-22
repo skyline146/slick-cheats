@@ -11,7 +11,7 @@ const rust_gameplay = "/images/products/products__rust_collapse2.png";
 
 import styles from "@/components/Product/Functional.module.css";
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
   const data = await getData("rust_collapse");
 
   return {

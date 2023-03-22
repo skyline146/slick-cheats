@@ -12,7 +12,7 @@ const rust_cheat_console = "/images/products/products__rust_slick_console.png";
 
 import styles from "@/components/Product/Functional.module.css";
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
   const data = await getData("rust_slick");
 
   return {

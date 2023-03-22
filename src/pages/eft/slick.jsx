@@ -10,7 +10,7 @@ const tarkov = "/images/logos/tarkov_logo_min.svg";
 
 import styles from "@/components/Product/Functional.module.css";
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
   const data = await getData("eft");
 
   return {

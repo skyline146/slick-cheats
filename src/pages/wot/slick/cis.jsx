@@ -4,7 +4,7 @@ import withHead from "@/utils/withHead";
 import WotSlickLayout from "@/components/WotSlickLayout/WotSlickLayout";
 import getData from "@/utils/getData";
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
   const data = await getData("wot");
 
   return {

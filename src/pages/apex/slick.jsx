@@ -10,7 +10,7 @@ const apex = "/images/apex.svg";
 
 import styles from "@/components/Product/Functional.module.css";
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
   const data = await getData("apex");
 
   return {
