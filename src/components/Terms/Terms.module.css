@@ -37,6 +37,14 @@
   text-decoration: none;
 }
 
+.terms__link_text {
+  color: #2f9bff;
+}
+
+.terms__link_text:hover {
+  text-decoration: underline;
+}
+
 .terms__navigation_text {
   font-style: normal;
   font-weight: 500;
@@ -162,8 +170,7 @@
   max-width: 1320px;
 }
 
-.terms__wrapper_width,
-.terms__wrapper_width * {
+.terms__wrapper_width {
   color: #c2c6d7;
   font-size: 20px;
   line-height: 24px;

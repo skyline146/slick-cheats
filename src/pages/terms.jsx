@@ -36,7 +36,7 @@ function Terms() {
           </div>
           <div className="terms__text-block">
             {t("about.termsFirstPreLinkText")}
-            <Link className={styles.terms__link} href="/">
+            <Link className={styles.terms__link_text} href="/">
               www.slickcheats.com
             </Link>
             {t("about.termsFirstPostLinkText")}
@@ -69,7 +69,7 @@ function Terms() {
           </div>
           <div className={styles["terms__text-block"]}>
             {t("about.termsThirdPreLinkText")}
-            <Link className={styles.terms__link} href="/">
+            <Link className={styles.terms__link_text} href="/">
               www.slickcheats.com
             </Link>
             {t("about.termsThirdPostLinkText")}
