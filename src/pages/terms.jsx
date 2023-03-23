@@ -120,6 +120,14 @@ function Terms() {
             <br />
             {t("about.termsText31")}
             <br />
+            {t("about.termsText32")}
+            <br />
+            {t("about.termsText33")}
+            <br />
+            {t("about.termsText34")}
+            <br />
+            {t("about.termsText35")}
+            <br />
           </div>
         </Trans>
       </div>
