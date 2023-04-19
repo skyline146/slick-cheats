@@ -1,9 +1,10 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import withHead from "@/utils/withHead";
-import Update from "@/components/Status/Update/Update";
 import ProductPageLayout from "@/components/Product/ProductPageLayout";
 import getData from "@/utils/getData";
+import useStatusStore from "@/lib/store";
+import Status from "@/components/Status";
 
 const bloodhunt_media = "/images/products/products__bloodhunt_slick.jpg";
 const bloodhunt = "/images/logos/bloodhunt_white.svg";
@@ -22,6 +23,8 @@ export async function getServerSideProps({ locale }) {
 }
 
 function BloodhuntSlick({ data }) {
+  const status = useStatusStore((state) => state.status);
+
   const functional = [
     {
       type: "esp",
@@ -65,7 +68,7 @@ function BloodhuntSlick({ data }) {
       gameLogo={bloodhunt}
       link="/catalog/bloodhunt"
       link2="/bloodhunt/slick"
-      status={<Update />}
+      status={<Status status={status.bloodhunt_slick} />}
       functional={functional}
       data={data}
     >

@@ -3,7 +3,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import withHead from "@/utils/withHead";
 import GameLayout from "@/components/Catalog/GameLayout";
 import AllGames from "@/components/AllGames/AllGames";
-import Undetected from "@/components/Status/Undetected/Undetected";
+import Status from "@/components/Status";
+import useStatusStore from "@/lib/store";
 
 const dayz_bg = "/images/products/products__dayz_collapse.png";
 const catalog_game = "/images/logos/dayz_logo.svg";
@@ -18,6 +19,8 @@ export async function getStaticProps({ locale }) {
 }
 
 function DayZ() {
+  const status = useStatusStore((state) => state.status);
+
   const game = {
     backgroundImage: catalog_dayz_bg,
     logo: catalog_game,
@@ -33,7 +36,7 @@ function DayZ() {
         title="COLLAPSE"
         logo={catalog_game}
         subtitle="DayZ"
-        status={<Undetected />}
+        status={<Status status={status.dayz_collapse} />}
       />
     </GameLayout>
   );

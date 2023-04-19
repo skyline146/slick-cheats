@@ -3,7 +3,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import withHead from "@/utils/withHead";
 import GameLayout from "@/components/Catalog/GameLayout";
 import AllGames from "@/components/AllGames/AllGames";
-import Undetected from "@/components/Status/Undetected/Undetected";
+import Status from "@/components/Status";
+import useStatusStore from "@/lib/store";
 
 const rust_bg_slick = "/images/products/products__rust_slick.png";
 const rust_bg_collapse = "/images/products/products__rust_collapse.png";
@@ -19,6 +20,8 @@ export async function getStaticProps({ locale }) {
 }
 
 function Rust() {
+  const status = useStatusStore((state) => state.status);
+
   const game = {
     backgroundImage: catalog_rust_bg,
     logo: catalog_game,
@@ -34,7 +37,7 @@ function Rust() {
         title="SLICK"
         logo={catalog_game}
         subtitle="Rust"
-        status={<Undetected />}
+        status={<Status status={status.rust_slick} />}
       />
       <AllGames
         link="/rust/collapse"
@@ -42,7 +45,7 @@ function Rust() {
         title="COLLAPSE"
         logo={catalog_game}
         subtitle="Rust"
-        status={<Undetected />}
+        status={<Status status={status.rust_collapse} />}
       />
     </GameLayout>
   );

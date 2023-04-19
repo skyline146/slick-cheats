@@ -2,9 +2,10 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 import withHead from "@/utils/withHead";
-import Undetected from "@/components/Status/Undetected/Undetected";
 import ProductPageLayout from "@/components/Product/ProductPageLayout";
 import getData from "@/utils/getData";
+import Status from "@/components/Status";
+import useStatusStore from "@/lib/store";
 
 const dayz_cheat = "/images/products/products__dayz_collapse2.png";
 const dayz = "/images/logos/dayz_logo.svg";
@@ -24,6 +25,7 @@ export async function getServerSideProps({ locale }) {
 
 function DayzCollapse({ data }) {
   const { t } = useTranslation();
+  const status = useStatusStore((state) => state.status);
 
   const functional = [
     {
@@ -69,7 +71,7 @@ function DayzCollapse({ data }) {
       gameLogo={dayz}
       link="/catalog/dayz"
       link2="/dayz/collapse"
-      status={<Undetected />}
+      status={<Status status={status.dayz_collapse} />}
       functional={functional}
       data={data}
     >

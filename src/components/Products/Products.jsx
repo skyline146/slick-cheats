@@ -2,10 +2,8 @@ import Link from "next/link";
 import { useTranslation } from "next-i18next";
 
 import AllGames from "../AllGames/AllGames";
-
-import Undetected from "../Status/Undetected/Undetected";
-import Update from "../Status/Update/Update";
-import Develope from "../Status/Develope/Develope";
+import Status from "../Status";
+import useStatusStore from "@/lib/store";
 
 const bloodhunt_image = "/images/products/products__bloodhunt_image.svg";
 const bloodhunt_logo = "/images/logos/bloodhunt_gray.svg";
@@ -20,6 +18,7 @@ import styles from "../Games/Games.module.css";
 
 function Products() {
   const { t } = useTranslation();
+  const status = useStatusStore((state) => state.status);
 
   return (
     <section className={styles.games}>
@@ -40,7 +39,7 @@ function Products() {
             title="SLICK"
             logo={apex_logo}
             subtitle="Apex"
-            status={<Update />}
+            status={<Status status={status.apex_slick} />}
           />
           <AllGames
             link="/eft/slick"
@@ -48,7 +47,7 @@ function Products() {
             title="SLICK"
             logo={tarkov_logo}
             subtitle="EFT"
-            status={<Undetected />}
+            status={<Status status={status.eft_slick} />}
           />
           <AllGames
             link="/bloodhunt/slick"
@@ -56,7 +55,7 @@ function Products() {
             title="SLICK"
             logo={bloodhunt_logo}
             subtitle="Bloodhunt"
-            status={<Update />}
+            status={<Status status={status.bloodhunt_slick} />}
           />
           <AllGames
             link="/catalog/wot"
@@ -64,7 +63,7 @@ function Products() {
             title="Cheat"
             logo={wot_logo}
             subtitle="World of Tanks Blitz"
-            status={<Undetected />}
+            status={<Status status={status.blitz_slick} />}
           />
         </div>
       </div>

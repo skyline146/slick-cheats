@@ -1,9 +1,10 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import withHead from "@/utils/withHead";
-import Undetected from "@/components/Status/Undetected/Undetected";
 import ProductPageLayout from "@/components/Product/ProductPageLayout";
 import getData from "@/utils/getData";
+import Status from "@/components/Status";
+import useStatusStore from "@/lib/store";
 
 const tarkov_media = "/images/products/products__tarkov_slick.jpg";
 const tarkov = "/images/logos/tarkov_logo_min.svg";
@@ -22,6 +23,8 @@ export async function getServerSideProps({ locale }) {
 }
 
 function EftSlick({ data }) {
+  const status = useStatusStore((state) => state.status);
+
   const functional = [
     {
       type: "esp",
@@ -50,7 +53,7 @@ function EftSlick({ data }) {
       gameLogo={tarkov}
       link="/catalog/eft"
       link2="/eft/slick"
-      status={<Undetected />}
+      status={<Status status={status.eft_slick} />}
       functional={functional}
       os={["Windows 10"]}
       data={data}

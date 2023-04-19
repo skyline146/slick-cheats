@@ -1,14 +1,28 @@
 import Head from "next/head";
+import { useEffect } from "react";
 import { appWithTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import NextNProgress from "nextjs-progressbar";
 
+import useStatusStore from "@/lib/store";
 import Layout from "@/components/Layout/Layout";
 
 import "../styles/globals.css";
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
+  const setGamesStatus = useStatusStore((state) => state.setGamesStatus);
+
+  useEffect(() => {
+    async function fetchStatuses() {
+      const statusData = await (await fetch("/api/status")).json();
+
+      setGamesStatus(statusData);
+    }
+
+    fetchStatuses();
+  }, []);
+
   return (
     <>
       <Head>

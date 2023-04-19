@@ -2,7 +2,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 import withHead from "@/utils/withHead";
-import Undetected from "@/components/Status/Undetected/Undetected";
+import Status from "@/components/Status";
+import useStatusStore from "@/lib/store";
 import ProductPageLayout from "@/components/Product/ProductPageLayout";
 import getData from "@/utils/getData";
 
@@ -25,6 +26,7 @@ export async function getServerSideProps({ locale }) {
 
 function RustSlick({ data }) {
   const { t } = useTranslation();
+  const status = useStatusStore((state) => state.status);
 
   const functional = [
     {
@@ -48,7 +50,7 @@ function RustSlick({ data }) {
       gameLogo={rust}
       link="/catalog/rust"
       link2="/rust/slick"
-      status={<Undetected />}
+      status={<Status status={status.rust_slick} />}
       functional={functional}
       data={data}
       macro

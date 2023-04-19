@@ -3,7 +3,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import withHead from "@/utils/withHead";
 import GameLayout from "@/components/Catalog/GameLayout";
 import AllGames from "@/components/AllGames/AllGames";
-import Undetected from "@/components/Status/Undetected/Undetected";
+import Status from "@/components/Status";
+import useStatusStore from "@/lib/store";
 
 const wot = "/images/products/products_wot_slick.jpg";
 const wot_logo = "/images/logos/wot_white.svg";
@@ -20,6 +21,8 @@ export async function getStaticProps({ locale }) {
 }
 
 function Wot() {
+  const status = useStatusStore((state) => state.status);
+
   const game = {
     backgroundImage: wot_bg,
     logo: wot_logo,
@@ -37,7 +40,7 @@ function Wot() {
         flags={[flag_ru]}
         logo={wot_logo}
         subtitle="World of Tanks Blitz"
-        status={<Undetected />}
+        status={<Status status={status.blitz_slick} />}
       />
       <AllGames
         link="/wot/slick/eu"
@@ -46,7 +49,7 @@ function Wot() {
         flags={[flag_eu]}
         logo={wot_logo}
         subtitle="World of Tanks Blitz"
-        status={<Undetected />}
+        status={<Status status={status.blitz_slick} />}
       />
     </GameLayout>
   );

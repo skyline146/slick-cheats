@@ -3,7 +3,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import GameLayout from "@/components/Catalog/GameLayout";
 import withHead from "@/utils/withHead";
 import AllGames from "@/components/AllGames/AllGames";
-import Update from "@/components/Status/Update/Update";
+import Status from "@/components/Status";
+import useStatusStore from "@/lib/store";
 
 const catalog_game = "/images/logos/bloodhunt_white.svg";
 const catalog__bloodhunt_game = "/images/catalog/bloodhunt_bg.png";
@@ -19,6 +20,8 @@ export async function getStaticProps({ locale }) {
 }
 
 function Bloodhunt() {
+  const status = useStatusStore((state) => state.status);
+
   const game = {
     backgroundImage: catalog__bloodhunt_game,
     logo: catalog_game,
@@ -34,7 +37,7 @@ function Bloodhunt() {
         title="SLICK"
         logo={bloodhunt_logo}
         subtitle="Bloodhunt"
-        status={<Update />}
+        status={<Status status={status.bloodhunt_slick} />}
       />
     </GameLayout>
   );

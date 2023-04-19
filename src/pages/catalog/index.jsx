@@ -1,6 +1,5 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import { withRouter } from "next/router";
 
 import withHead from "@/utils/withHead";
 import GamesCatalog from "@/components/Catalog/GamesCatalog";

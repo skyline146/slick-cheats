@@ -1,4 +1,5 @@
-import Undetected from "@/components/Status/Undetected/Undetected";
+import Status from "@/components/Status";
+import useStatusStore from "@/lib/store";
 import ProductPageLayout from "@/components/Product/ProductPageLayout";
 
 const wot = "/images/logos/wot_white.svg";
@@ -8,6 +9,8 @@ const wot_media_2 = "/images/products/products-wot2.png";
 import styles from "@/components/Product/Functional.module.css";
 
 export default function WotSlickLayout({ data, region }) {
+  const status = useStatusStore((state) => state.status);
+
   const functional = [
     {
       type: "esp",
@@ -37,7 +40,7 @@ export default function WotSlickLayout({ data, region }) {
       gameLogo={wot}
       link="/catalog/wot"
       link2={`/wot/slick/${region}`}
-      status={<Undetected />}
+      status={<Status status={status.blitz_slick} />}
       functional={functional}
       data={data}
       os={["Windows 10"]}

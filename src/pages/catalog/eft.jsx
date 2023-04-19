@@ -3,7 +3,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import withHead from "@/utils/withHead";
 import GameLayout from "@/components/Catalog/GameLayout";
 import AllGames from "@/components/AllGames/AllGames";
-import Undetected from "@/components/Status/Undetected/Undetected";
+import Status from "@/components/Status";
+import useStatusStore from "@/lib/store";
 
 const catalog_game = "/images/catalog__tarkov.png";
 const catalog_tarkov_image = "/images/catalog/tarkov_bg.png";
@@ -19,6 +20,8 @@ export async function getStaticProps({ locale }) {
 }
 
 function Tarkov() {
+  const status = useStatusStore((state) => state.status);
+
   const game = {
     backgroundImage: catalog_tarkov_image,
     logo: catalog_game,
@@ -34,7 +37,7 @@ function Tarkov() {
         title="SLICK EXTERNAL"
         logo={tarkov_logo}
         subtitle="EFT"
-        status={<Undetected />}
+        status={<Status status={status.eft_slick} />}
       />
     </GameLayout>
   );

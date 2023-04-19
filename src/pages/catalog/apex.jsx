@@ -1,9 +1,11 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import useStatusStore from "../../lib/store";
+
 import GameLayout from "@/components/Catalog/GameLayout";
 import withHead from "@/utils/withHead";
 import AllGames from "@/components/AllGames/AllGames";
-import Update from "@/components/Status/Update/Update";
+import Status from "@/components/Status";
 
 const catalog_game = "/images/logos/apex_white.svg";
 const catalog__apex_image = "/images/catalog/apex_bg.png";
@@ -19,6 +21,8 @@ export async function getStaticProps({ locale }) {
 }
 
 function Apex() {
+  const status = useStatusStore((state) => state.status);
+
   const game = {
     backgroundImage: catalog__apex_image,
     logo: catalog_game,
@@ -34,7 +38,7 @@ function Apex() {
         title="SLICK"
         logo={apex_logo}
         subtitle="Apex"
-        status={<Update />}
+        status={<Status status={status.apex_slick} />}
       />
     </GameLayout>
   );
