@@ -28,57 +28,17 @@ function ApexSlick({ data }) {
   const functional = [
     {
       type: "esp",
-      functions: [
-        "Enable",
-        "Visible only",
-        "Draw box",
-        "Draw skeleton",
-        "Draw health",
-        "Draw armor",
-        "Draw weapon",
-        "Draw distance",
-        "Draw snapline",
-        "Range",
-      ],
-    },
-    {
-      type: "aim",
-      functions: [
-        "pSilent",
-        "Nearest bone",
-        "Ignore kicked",
-        "FOV",
-        "Smooth",
-        "Remove sway",
-        "Remove recoil",
-        "Aim key",
-        "Auto-pistol",
-      ],
-    },
-    {
-      type: "loot",
-      functions: ["Ammo", "Weapon", "Backpack", "Armor", "Helmet", "Item glow"],
+      functions: ["Glow"],
     },
     {
       type: "misc",
-      functions: [
-        "Enable",
-        "Draw fov",
-        "Draw crosshair",
-        "Name",
-        "Health bar",
-        "Skeleton",
-        "Glow",
-        "Spectators",
-        "Bhop",
-        "Skin changer",
-        "Fake duck",
-        "Fake lag",
-      ],
+      functions: ["HWID Spoofer"],
     },
   ];
+
   return (
     <ProductPageLayout
+      page="apex_slick"
       title="Apex Legends"
       subtitle="SLICK"
       gameLogo={apex}
@@ -88,11 +48,7 @@ function ApexSlick({ data }) {
       functional={functional}
       data={data}
     >
-      <img
-        className={styles.functional__media_logo}
-        src={apex_media_bcw}
-        alt="apex"
-      />
+      <img className={styles.functional__media_logo} src={apex_media_bcw} alt="apex" />
     </ProductPageLayout>
   );
 }
